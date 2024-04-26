@@ -84,7 +84,7 @@ const NavBar = () => {
 <div className="gap-5  flex-wrap justify-between bg-[#B70050] p-5 hidden lg:flex">
     <div>
         <div className="flex gap-5">
-        <li className="font-robotocon text-white list-none text-xl"><NavLink>Home</NavLink></li>
+        <li className="font-robotocon text-white list-none text-xl"><NavLink to={'/'}>Home</NavLink></li>
          <li className="font-robotocon text-white  list-none  text-xl"><NavLink>All Art & craft Items</NavLink></li>
         <li className="font-robotocon text-white  list-none  text-xl"><NavLink>Add Craft Item</NavLink></li>
         <li className="font-robotocon text-white  list-none  text-xl"><NavLink>My Art&Craft List</NavLink></li>
