@@ -1,4 +1,5 @@
 import { FaGoogle } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
  
 
@@ -19,6 +20,9 @@ const Login = () => {
                 <div className="flex gap-2 items-center justify-center">
                       <button className="bg-[#B70050] px-3 py-2 text-white font-robotocon flex gap-2 justify-center items-center"><span><FaGoogle /></span>Google Login <p></p></button>
                       <button className="bg-[#B70050] px-3 py-2 text-white   font-robotocon">GithHub Login</button>
+                </div>
+                <div>
+                    <p className="text-center py-5">Create  an account: <Link className="text-red-500" to={'/register'}>Register</Link></p>
                 </div>
              </div>
         </div>

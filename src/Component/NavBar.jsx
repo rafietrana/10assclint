@@ -1,12 +1,16 @@
+import { useContext } from "react";
 import { GrWorkshop } from "react-icons/gr";
 import { IoLocationOutline, IoSearchOutline } from "react-icons/io5";
 import { MdOutlineMiscellaneousServices } from "react-icons/md";
 import { RiCustomerService2Line } from "react-icons/ri";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "./AuthProvider";
 
  
 
 const NavBar = () => {
+  const {user} = useContext(AuthContext);
+  console.log('frome user user value is ', user);
     return (
         <div>
             <div className="navbar w-9/12 mx-auto ">
