@@ -91,8 +91,13 @@ const NavBar = () => {
         </div>
     </div>
     <div className="flex gap-4 justify-center items-center">
-        <button className="text-white px-3 py-2 bg-[#49243E]"><Link to={'/login'}>Login</Link></button>
-        <button  className="text-white px-3 py-2 bg-[#845776]"><Link to={'/register'}>Register</Link></button>
+        <Link className="text-white px-3 py-2 bg-[#49243E]" to={'/login'}>
+          Login</Link> 
+        <Link className="text-white px-3 py-2 bg-[#49243E]" to={'/register'}>
+          Register</Link> 
+ 
+
+
     </div>
 
  
