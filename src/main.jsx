@@ -2,6 +2,9 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
  
 import './index.css'
+// tostyfi
+import { ToastContainer  } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 import {
@@ -13,6 +16,8 @@ import Home from './Component/Home';
 import Login from './Component/Login';
 import Register from './Component/Register';
 import AuthProvider from './Component/AuthProvider';
+import AddCraft from './Component/AddCraft';
+import PrivetRoute from './Component/PrivetRoute';
  
  
 
@@ -32,6 +37,10 @@ const router = createBrowserRouter([
       {
         path: '/register',
         element: <Register></Register>
+      },
+      {
+        path: '/addcraft',
+        element: <PrivetRoute><AddCraft></AddCraft></PrivetRoute>
       }
     ]
   },
@@ -42,5 +51,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <AuthProvider>
     <RouterProvider router={router} />
     </AuthProvider>
+    <ToastContainer />
   </React.StrictMode>,
 )

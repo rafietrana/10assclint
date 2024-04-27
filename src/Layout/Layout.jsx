@@ -9,7 +9,7 @@ const Layout = () => {
           <NavBar></NavBar>
           <Outlet></Outlet>
         </div>
-    );
+    ); 
 };
 
 export default Layout;

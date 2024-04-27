@@ -5,12 +5,19 @@ import { MdOutlineMiscellaneousServices } from "react-icons/md";
 import { RiCustomerService2Line } from "react-icons/ri";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "./AuthProvider";
-
+ import '../Component/Style/style.css'
+ 
  
 
 const NavBar = () => {
-  const {user} = useContext(AuthContext);
+  const {user,userLogout} = useContext(AuthContext);
   console.log('frome user user value is ', user);
+
+        const handleLogutBtn =()=>{
+          userLogout()
+        }
+
+ 
     return (
         <div>
             <div className="navbar w-9/12 mx-auto ">
@@ -86,17 +93,38 @@ const NavBar = () => {
 </div>
 <div className="w-9/12 mx-auto">
 <div className="gap-5  flex-wrap justify-between bg-[#B70050] p-5 hidden lg:flex">
-    <div>
-        <div className="flex gap-5">
-        <li className="font-robotocon text-white list-none text-xl"><NavLink to={'/'}>Home</NavLink></li>
-         <li className="font-robotocon text-white  list-none  text-xl"><NavLink>All Art & craft Items</NavLink></li>
-        <li className="font-robotocon text-white  list-none  text-xl"><NavLink>Add Craft Item</NavLink></li>
-        <li className="font-robotocon text-white  list-none  text-xl"><NavLink>My Art&Craft List</NavLink></li>
+    <div  className="">
+        <div className="flex gap-5 mt-2 ">
+        <li className="font-robotocon text-white list-none text-xl"><NavLink to={'/'} className={({ isActive }) => isActive ? " border-b-2 font-bold" : "" }>Home</NavLink></li>
+         <li className="font-robotocon text-white  list-none  text-xl  "><NavLink >All Art & craft Items</NavLink></li>
+        <li className="font-robotocon text-white  list-none  text-xl  "><NavLink to={'/addcraft'} className={({ isActive }) => isActive ? " border-b-2 font-bold" : " " }>Add Craft Item</NavLink></li>
+        <li className="font-robotocon text-white  list-none  text-xl content-hover"><NavLink>My Art&Craft List</NavLink></li>
         </div>
     </div>
     <div className="flex gap-4 justify-center items-center">
-        <Link className="text-white px-3 py-2 bg-[#49243E]" to={'/login'}>
-          Login</Link> 
+      {user ? <div className="relative top-0 left-0"><div className="avatar">
+        <div className="content-hover">
+        <div className="w-9 rounded-ful  mt-1 h rana relative">
+    <img src={user.photoURL ? (user.photoURL) : (<img src="https://i.ibb.co/zHN4wdW/images.png"></img>) } />
+
+  </div>
+  <div className="absolute joy h-20 top-16 z-40 bottom-0">
+  <div className="bg-gray-300 h-8 hover-div  shadow-lg">
+    <div >
+    <p className="text-center ">{user.displayName ? user.displayName : <p>Not found name</p>}</p>
+    </div>
+   <div onClick={handleLogutBtn} className="bg-black py-3 px-2  text-white">
+   <Link  className="p-5 pl-12  ">Logout</Link>
+   </div>
+
+              </div>
+  </div>
+
+        </div>
+
+</div></div>  :<Link className="text-white px-3 py-2 bg-[#49243E]" to={'/login'}>
+          Login</Link> }
+
         <Link className="text-white px-3 py-2 bg-[#49243E]" to={'/register'}>
           Register</Link> 
  
