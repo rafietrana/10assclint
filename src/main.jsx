@@ -18,6 +18,7 @@ import Register from './Component/Register';
 import AuthProvider from './Component/AuthProvider';
 import AddCraft from './Component/AddCraft';
 import PrivetRoute from './Component/PrivetRoute';
+import ErrorPage from './Component/ErrorPage';
  
  
 
@@ -25,6 +26,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout></Layout>,
+    errorElement: <ErrorPage></ErrorPage>,
     children:[
       {
         path: '/',

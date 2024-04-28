@@ -16,7 +16,7 @@ const PrivetRoute = ({children}) => {
  if(loading){
     return <p className="w-9/12 mx-auto flex justify-center items-center py-4"><span className="loading loading-spinner loading-lg"></span></p>
  }
- 
+  
       if (user) {
         return children;
           }

@@ -37,7 +37,14 @@ const AddCraft = () => {
         .then(data=>{
             console.log(data);
             if(data.insertedId){
+                form.reset();
                 toast.success('sucessfully created a new user')
+                  fetch(`http://localhost:5000/mycard/${users?.email}`)
+                  .then(res =>res.json())
+                  .then(data=>{
+                    console.log(data);
+                  })
+
             }
 
         } )

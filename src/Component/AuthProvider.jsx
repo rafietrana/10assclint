@@ -16,6 +16,22 @@ const githhubProvider = new   GithubAuthProvider();
 
 const AuthProvider = ({children}) => {
     const [user, setUser] = useState(null);
+    const [AddedData, setMyAddedData] = useState([])
+    
+
+useEffect(()=>{
+      fetch(`http://localhost:5000/mycard/${user?.email}`)
+      .then(res=> res.json())
+      .then(data=> setMyAddedData(data))
+}, [user])
+ 
+
+
+ 
+ 
+
+
+ 
 
     const [loading,  setLoading] = useState(true)
 
@@ -86,7 +102,9 @@ const githubLogin = () =>{
          googleLogin,
          githubLogin,
          userLogout,
-         loading
+         loading, 
+         AddedData
+         
     }
     return (
      <AuthContext.Provider value={userInfo}>
