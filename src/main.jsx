@@ -19,6 +19,7 @@ import AuthProvider from './Component/AuthProvider';
 import AddCraft from './Component/AddCraft';
 import PrivetRoute from './Component/PrivetRoute';
 import ErrorPage from './Component/ErrorPage';
+import ViewDetails from './Component/ViewDetails';
  
  
 
@@ -43,6 +44,12 @@ const router = createBrowserRouter([
       {
         path: '/addcraft',
         element: <PrivetRoute><AddCraft></AddCraft></PrivetRoute>
+      },
+      {
+        path: '/viewdetails/:id',
+        element: <ViewDetails></ViewDetails>,
+         loader: ({params})=> fetch(`http://localhost:5000/finddata/${params.id}`)
+
       }
     ]
   },
