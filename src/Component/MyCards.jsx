@@ -1,11 +1,15 @@
 import { CiBookmark } from "react-icons/ci";
 import { GiSelfLove } from "react-icons/gi";
 import { IoIosArrowRoundForward } from "react-icons/io";
-import { IoLocationOutline } from "react-icons/io5";
+ 
 import { TbCategory } from "react-icons/tb";
 import { Link } from "react-router-dom";
 
 const MyCards = ({dataAdded}) => {
+
+
+
+  
   return (
     <div className="card card-compact w-full  border bg-gray-50">
     <div className="relative">
@@ -38,11 +42,7 @@ const MyCards = ({dataAdded}) => {
       <button className="px-3 py-2 bg-gray-100 text-gray-800 font-semibold w-fit rounded-lg"> {dataAdded?.Stuck_status} </button>
       </div>
   
-      {/* <p>{description.length > 200 ? description.slice(0, 200) : description }</p>
-  
-      {
-          facilities.map( (cardFacalitis, idx) => <li key={idx}>{cardFacalitis}</li>)
-      } */}
+ 
         <p className="flex gap-2 items-center "><span><TbCategory /></span> <span className="font-semibold">SubCategory :</span> {dataAdded?.Subcategory_Name}</p>
       <div className="card-actions ">
           <Link  ><button className="px-3 py-2 text-md border  text-black rounded-lg font-semibold my-5 flex gap-2 items-center">View Details<span className="text-xl"><IoIosArrowRoundForward /></span></button></Link>
