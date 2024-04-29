@@ -7,3 +7,31 @@
 body {
   font-family: "roboto", sans-serif;
 }
+
+
+
+
+ 
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+    content: 'next';
+ 
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+  content: 'prev';
+ 
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+.swiper-button-prev:after, .swiper-button-next:after {
+  font-family: swiper-icons;
+  font-size: var(--swiper-navigation-size);
+  text-transform: none !important;
+  letter-spacing: 0;
+  font-variant: initial;
+  line-height: 1;
+  font-size: 10px;
+  color: white;
+}
+ 

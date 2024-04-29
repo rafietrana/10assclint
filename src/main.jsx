@@ -61,7 +61,7 @@ const router = createBrowserRouter([
       },
       {
           path: '/craftlist/:email',
-          element: <CraftList></CraftList>,
+          element: <PrivetRoute><CraftList></CraftList></PrivetRoute>,
           loader: ({params})=>  fetch(`http://localhost:5000/mycard/${params.email}`)
  
 

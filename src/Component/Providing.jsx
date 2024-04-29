@@ -1,13 +1,16 @@
+import { Bounce, Fade } from "react-awesome-reveal";
 import { AiFillCrown } from "react-icons/ai";
 import { FaArrowRight } from "react-icons/fa6";
 
 const Providing = () => {
     return (
         <div className="w-9/12 mx-auto my-10 space-y-9">
+          <Fade cascade delay={1000}>
             <p className="lg:text-3xl md:text-2xl text-xl font-semibold" data-aos="zoom-in" data-aos-duration="1000">What we are providing</p>
-
+            </Fade>
+            <Bounce>
             <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 py-10" data-aos="zoom-in" data-aos-duration="1000">
-               <div className="space-y-5 border rounded-lg p-5 bg-red-300">
+               <div className={`space-y-5 border rounded-lg p-5  bg-red-300`}>
                  <div className="text-2xl text-green-500 w-2/12 bg-gray-100 rounded-full flex justify-center items-center py-4"><span><AiFillCrown /></span></div>
                  <p className="text-2xl font-semibold">Landscape Painting</p>
                  <p className="min-h-28">Mountain view canvas, Forest based Landscape painting.</p>
@@ -47,6 +50,7 @@ const Providing = () => {
                  <p className="flex items-center gap-2 text-black text-xl">Read More <span><FaArrowRight /></span></p>
                </div>
             </div>
+            </Bounce>
         </div>
     );
 };

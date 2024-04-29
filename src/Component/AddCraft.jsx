@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "./AuthProvider";
 import { toast } from "react-toastify";
+import { Fade } from "react-awesome-reveal";
 
 const AddCraft = () => {
   const { user } = useContext(AuthContext);
@@ -63,7 +64,9 @@ const AddCraft = () => {
   return (
     <div className="w-9/12 my-28 mx-auto flex justify-center item-center flex-col h-screen">
       <div className="text-center font-roboto text-[#B70050]">
+        <Fade cascade delay={500}>
         <p className="font-semibold py-5 text-2xl">Add Craft Item</p>
+        </Fade>
       </div>
       <div>
         <form onSubmit={handleAddDataBtn} className="w-6/12 space-y-4 mx-auto ">

@@ -1,6 +1,6 @@
 import { CiBookmark } from "react-icons/ci";
 import { GiSelfLove } from "react-icons/gi";
-import { IoIosArrowRoundForward } from "react-icons/io";
+ 
  
 import { TbCategory } from "react-icons/tb";
 import { Link } from "react-router-dom";
