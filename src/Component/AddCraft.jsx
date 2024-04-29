@@ -22,7 +22,7 @@ const AddCraft = () => {
         const User_Name = form.User_Name.value;
         const User_Email = form.User_Email.value;
         const dataInfo = {Item_name, Image, Subcategory_Name, Stuck_status, Short_Description, Price, Procassing_Time,  Customization, Rating, User_Name, User_Email }
-        console.log('data information is ', dataInfo);
+ 
 
 
 
