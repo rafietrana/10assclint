@@ -74,7 +74,8 @@ const router = createBrowserRouter([
 
       {
         path: '/subcards/:category',
-        element: <SubCategory></SubCategory>
+        element: <SubCategory></SubCategory>,
+        loader: ({params})=>fetch(`http://localhost:5000/findsub/${params.category}`)
       },
         
       {

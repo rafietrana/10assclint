@@ -1,10 +1,11 @@
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const CategoryCard = ({catagory}) => {
-  return (
+    return (
     <div>
         <Link to={`/subcards/${catagory?.Subcategory_Name}`}>
-        <div className="card  bg-base-100  border hover:bg-red-300 cursor-pointer">
+        <div onClick={()=> handleSubCardBtn(catagory?.Subcategory_Name)} className="card  bg-base-100  border hover:bg-red-300 cursor-pointer">
         <figure className="px-10 pt-10">
           <img
             src={catagory?.Image}
@@ -21,7 +22,7 @@ const CategoryCard = ({catagory}) => {
         </Link>
 
     </div>
-  );
+    );
 };
 
 export default CategoryCard;
