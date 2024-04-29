@@ -53,12 +53,12 @@ const Update = () => {
         
     }
     return (
-        <div className="w-9/12 my-28 mx-auto flex justify-center item-center flex-col h-screen">
+        <div className="w-10/12 my-28 mx-auto flex justify-center item-center flex-col h-screen">
                     <div className="text-center font-roboto text-[#B70050]"><p className="font-semibold py-5 text-2xl">Update You Craft Item</p></div>
                     {
                         updateData.map(dataUpdate =>(
                             <div key={dataUpdate._id}>
-                            <form onSubmit={handleUpdateNowBtn}  className="w-6/12 space-y-4 mx-auto ">
+                            <form onSubmit={handleUpdateNowBtn}  className="w-11/12 space-y-4 mx-auto ">
                                 <div>
                                 <label className="font-roboto " >Item Name</label>
                                 <input  className="w-full px-3 py-2 outline-none border-2" name='Item_Name' defaultValue={ dataUpdate.Item_name} type="text" />
@@ -92,14 +92,14 @@ const Update = () => {
     
     
                                 <div className="flex gap-5">
-                                    <p>Customization == <span>Defult Value is  ({dataUpdate?.Customization}) :</span></p>
+                                    <p>Customization  </p>
                                     <div className="flex gap-2 items-center">
                                            <label htmlFor="yes" className="font-roboto">yes</label>
-                                           <input type="radio" value={'yes'} name="Customization"   id="yes" />
+                                           <input type="radio"  defaultChecked={dataUpdate.Customization === 'yes'} value={'yes'} name="Customization"   id="yes" />
                                 </div>
                                     <div className="flex gap-2 items-center">
                                            <label htmlFor="no" className="font-roboto">No</label>
-                                           <input type="radio" name="Customization" id="no"   value={'no'} />
+                                           <input type="radio" defaultChecked={dataUpdate.Customization === 'no'}  name="Customization" id="no"   value={'no'} />
                                 </div>
                                 </div>
     
@@ -107,11 +107,12 @@ const Update = () => {
                                     <p>Stuck Status ==<span>Defult  Value is ({dataUpdate?.Stuck_status}) :</span></p>
                                     <div className="flex gap-2 items-center">
                                         <label htmlFor="in-stock">In Stock</label>
-                                           <input   required    type="radio" value={'In stock'} name="Stuck_Status" id="in-stock" />
+                                           <input       type="radio"   defaultChecked={dataUpdate.Stuck_Status === 'In stock'} value={'In stock'} name="Stuck_Status" id="in-stock" />
                                 </div>
                                     <div className="flex gap-2 items-center">
                                            <label htmlFor="no" className="font-roboto">Made to Order</label>
-                                           <input required  type="radio"   name="Stuck_Status" id="no-stock" value={'Made to Order'} />
+                                           <input required type="radio" defaultChecked={dataUpdate.Stuck_Status === 'Made to Order'} name="Stuck_Status" id="no-stock" value={'Made to Order'} />
+
                                 </div>
                                 </div>
     

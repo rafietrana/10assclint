@@ -6,14 +6,15 @@ import { Bounce, Fade } from "react-awesome-reveal";
  
 
 const ShowMyCard = () => {
+    const {user} = useContext(AuthContext)
     const  {AddedData} = useContext(AuthContext);
     console.log(AddedData);
  
 
     return (
         <div className="w-9/12 mx-auto flex flex-col justify-center items-center my-16 space-y-4">
-               <div className="text-2xl font-robotocon text-[#B70050] font-semibold"><Fade cascade delay={500} l> Your Added Data</Fade></div> 
-             
+
+             {user &&  <div className="text-2xl font-robotocon text-[#B70050] font-semibold"><Fade cascade delay={500} l> Your Added Data</Fade></div>   }
            <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-2 ">
            <Bounce duration={1000}>
                   {
