@@ -3,6 +3,7 @@ import { CiBookmark } from 'react-icons/ci';
 import { GiSelfLove } from 'react-icons/gi';
 import { IoIosArrowRoundForward } from 'react-icons/io';
 import { TbCategory } from 'react-icons/tb';
+import { Link } from 'react-router-dom';
 
 const SubCard = ({dataSub}) => {
     return (
@@ -43,7 +44,8 @@ const SubCard = ({dataSub}) => {
             <p className="flex gap-2 items-center "><span><TbCategory/></span> <span className="font-semibold">Procassing Time :</span> {dataSub?.Procassing_Time}</p>
             <p>{dataSub?.Short_Description}</p>
           <div className="card-actions ">
-              <button className='bg-gray-200 px-3 py-2 w-full'> View Details</button>
+            <Link className='w-full' to={''}><button className='bg-gray-200 px-3 py-2 w-full'> View Details</button></Link>
+              
       
           </div>
         </div>

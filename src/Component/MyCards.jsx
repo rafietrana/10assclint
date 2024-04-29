@@ -53,7 +53,7 @@ const MyCards = ({dataAdded}) => {
  
         <p className="flex gap-2 items-center "><span><TbCategory /></span> <span className="font-semibold">StuckStatus :</span> {dataAdded?.Stuck_status}</p>
         <p className="flex gap-2 items-center "><span><TbCategory /></span> <span className="font-semibold">SubCategory :</span> {dataAdded?.Subcategory_Name}</p>
-        <p>{dataAdded?.Short_Description}</p>
+ 
       <div className="card-actions ">
           <Link to={`/viewdetails/${dataAdded?._id}`} ><button onClick={()=>handleViewBtn(dataAdded)}  className="px-3 w-full  py-2 text-md border  text-black rounded-lg font-semibold my-5 flex gap-2 items-center">View Details </button></Link>
   
