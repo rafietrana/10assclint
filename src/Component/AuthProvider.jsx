@@ -16,14 +16,15 @@ const githhubProvider = new   GithubAuthProvider();
 
 const AuthProvider = ({children}) => {
     const [user, setUser] = useState(null);
-    const [AddedData, setMyAddedData] = useState([])
-    
+    const [AddedData, setMyAddedData] = useState([]);
+    const [loading,  setLoading] = useState(true);
+    const [deletedData, setDeletedData] = useState(true)
 
 useEffect(()=>{
       fetch(`http://localhost:5000/mycard/${user?.email}`)
       .then(res=> res.json())
       .then(data=> setMyAddedData(data))
-}, [user])
+}, [user, deletedData])
  
 
 
@@ -33,13 +34,13 @@ useEffect(()=>{
 
  
 
-    const [loading,  setLoading] = useState(true)
+
 
 
 
 
     const createUser = (email, password) =>{
-        loading(true)
+        setLoading(true);
            return   createUserWithEmailAndPassword(auth, email, password);
     }
 
@@ -103,7 +104,10 @@ const githubLogin = () =>{
          githubLogin,
          userLogout,
          loading, 
-         AddedData
+         AddedData,
+         setDeletedData,
+         deletedData
+
          
     }
     return (

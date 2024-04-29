@@ -20,6 +20,10 @@ import AddCraft from './Component/AddCraft';
 import PrivetRoute from './Component/PrivetRoute';
 import ErrorPage from './Component/ErrorPage';
 import ViewDetails from './Component/ViewDetails';
+import ShowAllCard from './Component/ShowAllCard';
+import AllViewDetails from './Component/AllViewDetails';
+import CraftList from './Component/CraftList';
+import Update from './Component/Update';
  
  
 
@@ -46,11 +50,39 @@ const router = createBrowserRouter([
         element: <PrivetRoute><AddCraft></AddCraft></PrivetRoute>
       },
       {
+          path: '/allcraft',
+          element: <ShowAllCard></ShowAllCard>,
+          loader: ()=>fetch('http://localhost:5000/postdata')
+
+
+      },
+      {
+          path: '/craftlist/:email',
+          element: <CraftList></CraftList>,
+          loader: ({params})=>  fetch(`http://localhost:5000/mycard/${params.email}`)
+ 
+
+      },
+      {
         path: '/viewdetails/:id',
         element: <ViewDetails></ViewDetails>,
          loader: ({params})=> fetch(`http://localhost:5000/finddata/${params.id}`)
 
+      },
+        
+      {
+           path: '/allviewdetails/:id',
+           element: <PrivetRoute> <AllViewDetails></AllViewDetails></PrivetRoute>,
+           loader: ({params})=>fetch(`http://localhost:5000/finddata/${params.id}`)
+      },
+      {
+        path: 'update/:id',
+        element: <Update></Update>,
+        loader: ({params})=>fetch(`http://localhost:5000/finddata/${params.id}`)
+ 
+
       }
+
     ]
   },
 ]);

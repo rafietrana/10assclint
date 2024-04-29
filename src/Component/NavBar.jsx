@@ -96,9 +96,9 @@ const NavBar = () => {
     <div  className="">
         <div className="flex gap-5 mt-2 ">
         <li className="font-robotocon text-white list-none text-xl"><NavLink to={'/'} className={({ isActive }) => isActive ? " border-b-2 font-bold" : "" }>Home</NavLink></li>
-         <li className="font-robotocon text-white  list-none  text-xl  "><NavLink to={'/allcraft'}>All Art & craft Items</NavLink></li>
+         <li className="font-robotocon text-white  list-none  text-xl  "><NavLink to={'/allcraft'} className={({ isActive }) => isActive ? " border-b-2 font-bold" : "" }>All Art & craft Items</NavLink></li>
         <li className="font-robotocon text-white  list-none  text-xl  "><NavLink to={'/addcraft'} className={({ isActive }) => isActive ? " border-b-2 font-bold" : " " }>Add Craft Item</NavLink></li>
-        <li className="font-robotocon text-white  list-none  text-xl content-hover"><NavLink>My Art&Craft List</NavLink></li>
+        <li className="font-robotocon text-white  list-none  text-xl content-hover"><NavLink to={`/craftlist/${user?.email}`} className={({ isActive }) => isActive ? " border-b-2 font-bold" : " " } >My Art&Craft List</NavLink></li>
         </div>
     </div>
     <div className="flex gap-4 justify-center items-center">

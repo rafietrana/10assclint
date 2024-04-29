@@ -38,7 +38,7 @@ const ViewDetails = () => {
                                                         <p><span className="font-semibold">Customization : </span>{dataLoader?.Customization}</p>
                                                         <p><span className="font-semibold">Rating : </span>{dataLoader?.Rating}</p>
                                                         <p><span className="font-semibold">User_Name : </span>{dataLoader?.User_Name}</p>
-                                                        <p><span className="font-semibold">User_Email : </span>{dataLoader?.User_Name}</p>
+                                                        <p><span className="font-semibold">User_Email : </span>{dataLoader?.User_Email}</p>
                                                      </div>
                                                 </div>
                                             ))

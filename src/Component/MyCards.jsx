@@ -25,8 +25,8 @@ const MyCards = ({dataAdded}) => {
     <figure><img className="w-full h-[250px] rounded-lg" src={dataAdded?.Image} alt="Shoes" /></figure>
     <div className="absolute top-3 right-3 text-white flex gap-3 ">
    
-      <div><button className="bg-red-500 text-white px-2 py-1 font-semibold rounded-lg ">Property id </button></div>
-      <div><button className="bg-green-500 text-white px-2 py-1 font-semibold rounded-lg">For status</button></div>
+      {/* <div><button className="bg-red-500 text-white px-2 py-1 font-semibold rounded-lg ">Property id </button></div>
+      <div><button className="bg-green-500 text-white px-2 py-1 font-semibold rounded-lg">For status</button></div> */}
    
     </div>
     <div className=" absolute bottom-3 w-full px-3">
