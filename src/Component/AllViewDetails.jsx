@@ -4,7 +4,7 @@ import { useLoaderData } from "react-router-dom";
 
 const AllViewDetails = () => {
     const allViewDetailsData = useLoaderData();
-    console.log('all view details data is ', allViewDetailsData);
+    
     return (
         <div className="w-9/12 mx-auto">
  
