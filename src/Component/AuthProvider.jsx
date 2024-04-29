@@ -18,12 +18,15 @@ const AuthProvider = ({children}) => {
     const [user, setUser] = useState(null);
     const [AddedData, setMyAddedData] = useState([]);
     const [loading,  setLoading] = useState(true);
-    const [deletedData, setDeletedData] = useState(true)
+    const [deletedData, setDeletedData] = useState(true);
+    const [webLoading, setWebLoading] = useState(true)
 
 useEffect(()=>{
+    setWebLoading(true)
       fetch(`http://localhost:5000/mycard/${user?.email}`)
       .then(res=> res.json())
       .then(data=> setMyAddedData(data))
+      setWebLoading(false)
 }, [user, deletedData])
  
 
@@ -40,17 +43,20 @@ useEffect(()=>{
 
 
     const createUser = (email, password) =>{
+        setWebLoading(true)
         setLoading(true);
            return   createUserWithEmailAndPassword(auth, email, password);
     }
 
 
     const loginUser =(email, password)=>{
+        setWebLoading(true)
         setLoading(true);
        return signInWithEmailAndPassword(auth, email, password)
     }
 
 const addMoreInfo =(name, photo)=>{
+    setWebLoading(true)
     setLoading(true)
     updateProfile(auth.currentUser, {
          displayName: name,
@@ -63,16 +69,19 @@ const addMoreInfo =(name, photo)=>{
  
 
 const googleLogin = () =>{
+    setWebLoading(true)
     setLoading(true)
     return  signInWithPopup(auth, googleProvider)
     }
 const githubLogin = () =>{
+    setWebLoading(true)
     setLoading(true)
     return  signInWithPopup(auth,  githhubProvider)
     }
 
 
     const userLogout =()=>{
+        setWebLoading(true)
        setLoading(true)
        return signOut(auth);
       }
@@ -81,10 +90,11 @@ const githubLogin = () =>{
     useEffect(() => {
 
         const unSubscribe = onAuthStateChanged(auth, currentUser => {
-   
+            setWebLoading(true)
   
             setUser(currentUser);
             setLoading(false);
+            setWebLoading(false)
         });
       
         return () => {
@@ -106,7 +116,8 @@ const githubLogin = () =>{
          loading, 
          AddedData,
          setDeletedData,
-         deletedData
+         deletedData,
+         webLoading,
 
          
     }

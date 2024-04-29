@@ -24,6 +24,8 @@ import ShowAllCard from './Component/ShowAllCard';
 import AllViewDetails from './Component/AllViewDetails';
 import CraftList from './Component/CraftList';
 import Update from './Component/Update';
+import WeLoading from './Component/WeLoading';
+import SubCategory from './Component/SubCategory';
  
  
 
@@ -35,7 +37,7 @@ const router = createBrowserRouter([
     children:[
       {
         path: '/',
-        element: <Home></Home>
+        element: <WeLoading><Home></Home></WeLoading>
       },
       {
         path: '/login',
@@ -68,6 +70,11 @@ const router = createBrowserRouter([
         element: <ViewDetails></ViewDetails>,
          loader: ({params})=> fetch(`http://localhost:5000/finddata/${params.id}`)
 
+      },
+
+      {
+        path: '/subcards/:category',
+        element: <SubCategory></SubCategory>
       },
         
       {

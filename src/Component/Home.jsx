@@ -1,5 +1,6 @@
  
 import Brand from "./Brand";
+import CraftCategory from "./CraftCategory";
 import Providing from "./Providing";
 import ShowMyCard from "./ShowMyCard";
 import Slider from "./Slider";
@@ -17,6 +18,7 @@ const Home = () => {
             <ShowMyCard></ShowMyCard>
             <Brand></Brand>
             <Providing></Providing>
+            <CraftCategory></CraftCategory>
 
 
             
