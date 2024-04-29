@@ -45,7 +45,7 @@ const AddCraft = () => {
                   fetch(`http://localhost:5000/mycard/${users?.email}`)
                   .then(res =>res.json())
                   .then(data=>{
-                    console.log(data);
+
 
                   })
 
