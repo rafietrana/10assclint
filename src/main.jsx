@@ -26,6 +26,7 @@ import CraftList from './Component/CraftList';
 import Update from './Component/Update';
 import WeLoading from './Component/WeLoading';
 import SubCategory from './Component/SubCategory';
+import SubView from './Component/SubView';
  
  
 
@@ -76,6 +77,11 @@ const router = createBrowserRouter([
         path: '/subcards/:category',
         element: <SubCategory></SubCategory>,
         loader: ({params})=>fetch(`http://localhost:5000/findsub/${params.category}`)
+      },
+      {
+           path: '/suview/:subcategory',
+           element: <SubView></SubView>,
+           loader: ({params})=> fetch(`http://localhost:5000/findsub/${params.subcategory}`)
       },
         
       {
