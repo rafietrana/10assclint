@@ -107,11 +107,11 @@ const Update = () => {
                                     <p>Stuck Status ==<span>Defult  Value is ({dataUpdate?.Stuck_status}) :</span></p>
                                     <div className="flex gap-2 items-center">
                                         <label htmlFor="in-stock">In Stock</label>
-                                           <input     type="radio" value={'In stock'} name="Stuck_Status" id="in-stock" />
+                                           <input   required    type="radio" value={'In stock'} name="Stuck_Status" id="in-stock" />
                                 </div>
                                     <div className="flex gap-2 items-center">
                                            <label htmlFor="no" className="font-roboto">Made to Order</label>
-                                           <input type="radio"   name="Stuck_Status" id="no-stock" value={'Made to Order'} />
+                                           <input required  type="radio"   name="Stuck_Status" id="no-stock" value={'Made to Order'} />
                                 </div>
                                 </div>
     

@@ -18,6 +18,7 @@ const CategoryCard = ({catagory}) => {
     
  
         </div>
+     
       </div>
         </Link>
 

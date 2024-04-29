@@ -25,8 +25,7 @@ const MyCards = ({dataAdded}) => {
     <figure><img className="w-full h-[250px] rounded-lg" src={dataAdded?.Image} alt="Shoes" /></figure>
     <div className="absolute top-3 right-3 text-white flex gap-3 ">
    
-      {/* <div><button className="bg-red-500 text-white px-2 py-1 font-semibold rounded-lg ">Property id </button></div>
-      <div><button className="bg-green-500 text-white px-2 py-1 font-semibold rounded-lg">For status</button></div> */}
+ 
    
     </div>
     <div className=" absolute bottom-3 w-full px-3">
@@ -46,15 +45,17 @@ const MyCards = ({dataAdded}) => {
     
   
     <div className="card-body">
-      <div className="flex gap-5">
+      <div className="">
       <h2 className="card-title"> {dataAdded?.Item_name} </h2>
-      <button className="px-3 py-2 bg-gray-100 text-gray-800 font-semibold w-fit rounded-lg"> {dataAdded?.Stuck_status} </button>
+ 
       </div>
   
  
+        <p className="flex gap-2 items-center "><span><TbCategory /></span> <span className="font-semibold">StuckStatus :</span> {dataAdded?.Stuck_status}</p>
         <p className="flex gap-2 items-center "><span><TbCategory /></span> <span className="font-semibold">SubCategory :</span> {dataAdded?.Subcategory_Name}</p>
+        <p>{dataAdded?.Short_Description}</p>
       <div className="card-actions ">
-          <Link to={`/viewdetails/${dataAdded?._id}`} ><button onClick={()=>handleViewBtn(dataAdded)}  className="px-3 py-2 text-md border  text-black rounded-lg font-semibold my-5 flex gap-2 items-center">View Details<span className="text-xl"><IoIosArrowRoundForward /></span></button></Link>
+          <Link to={`/viewdetails/${dataAdded?._id}`} ><button onClick={()=>handleViewBtn(dataAdded)}  className="px-3 w-full  py-2 text-md border  text-black rounded-lg font-semibold my-5 flex gap-2 items-center">View Details </button></Link>
   
       </div>
     </div>
