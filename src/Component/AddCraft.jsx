@@ -46,7 +46,7 @@ const AddCraft = () => {
                   .then(res =>res.json())
                   .then(data=>{
 
-
+                   console.log(data);
                   })
 
 
