@@ -19,11 +19,12 @@ const Update = () => {
         const Price = form.price.value;
         const Procassing_Time = form.Procassing_Time.value;
         const Customization = form.Customization.value;
-        const Rating = form.rating.value;
-        const Stuck_status = form.Stuck_Status.value;
+        const Rating = form.Rating.value;
+        const Stuck_status = form.Stuck_status.value;
  
         const dataInfo = {Item_name, Image, Subcategory_Name, Stuck_status, Short_Description, Price, Procassing_Time,  Customization, Rating,   }
         console.log('data information is ', dataInfo);
+        
          
 
         fetch(`http://localhost:5000/updatedata/${updateData[0]?._id}`, {
@@ -67,10 +68,35 @@ const Update = () => {
                                 <label className="font-roboto ">Image</label>
                                 <input className="w-full px-3 py-2 outline-none border-2" name="image" type="text" defaultValue={dataUpdate?.Image} />
                                 </div>
+
+
+
                                 <div>
-                                <label className="font-roboto ">Subcategory Name</label>
-                                <input defaultValue={dataUpdate?.Subcategory_Name} className="w-full px-3 py-2 outline-none border-2" name="Subcategory_Name" type="text" />
-                                </div>
+            <label
+              htmlFor="countries"
+              className="block mb-2 text-sm font-medium text-gray-900 dark:text-white outline-none"
+            >
+              Select an SubCatagroy
+            </label>
+            <select
+            defaultValue={dataUpdate?.Subcategory_Name}
+            name="Subcategory_Name"
+              id="countries"
+              className="  border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            >
+               <option    value="Landscape_Painting">Landscape Painting</option>
+              <option   value="Watercolour_Painting">Watercolour Painting:</option>
+              <option   value="Oil_Painting">Oil Painting</option>
+              <option   value="Charcoal_Sketching">Charcoal Sketching:</option>
+              <option   value="Cartoon_Drawing">Cartoon Drawing</option>
+              <option   value="Portrait_Drawing">Portrait Drawing</option>
+            </select>
+          </div>
+
+
+
+
+
                                 <div>
                                 <label className="font-roboto ">Short Description</label>
                                 <input defaultValue={dataUpdate?.Short_Description} className="w-full px-3 py-2 outline-none border-2" name="Short_Description" type="text" />
@@ -104,14 +130,14 @@ const Update = () => {
                                 </div>
     
                                 <div className="flex gap-5">
-                                    <p>Stuck Status ==<span>Defult  Value is ({dataUpdate?.Stuck_status}) :</span></p>
+                                    <p>Stuck Status </p>
                                     <div className="flex gap-2 items-center">
                                         <label htmlFor="in-stock">In Stock</label>
-                                           <input       type="radio"   defaultChecked={dataUpdate.Stuck_Status === 'In stock'} value={'In stock'} name="Stuck_Status" id="in-stock" />
+                                           <input       type="radio"   defaultChecked={dataUpdate.Stuck_status === 'In stock'} value={'In stock'} name="Stuck_status" id="in-stock" />
                                 </div>
                                     <div className="flex gap-2 items-center">
                                            <label htmlFor="no" className="font-roboto">Made to Order</label>
-                                           <input required type="radio" defaultChecked={dataUpdate.Stuck_Status === 'Made to Order'} name="Stuck_Status" id="no-stock" value={'Made to Order'} />
+                                           <input required type="radio" defaultChecked={dataUpdate.Stuck_status === 'Made to Order'} name="Stuck_status" id="no-stock" value={'Made to Order'} />
 
                                 </div>
                                 </div>
@@ -131,26 +157,26 @@ const Update = () => {
     
     
                                 <div className="flex gap-5">
-                                    <p>Rating== <span>Defult Value is ({dataUpdate?.Rating}) :</span></p>
+                                    <p>Rating </p>
                                     <div className="flex gap-2 items-center">
                                            <label htmlFor="1" className="font-roboto">1</label>
-                                           <input type="radio" value={'1'} name="rating" id="1" />
+                                           <input defaultChecked={dataUpdate.Rating ==='1'} type="radio" value={'1'} name="Rating" id="1" />
                                 </div>
                                     <div className="flex gap-2 items-center">
                                            <label htmlFor="3" className="font-roboto">2</label>
-                                           <input type="radio" value={'2'} name="rating" id="2" />
+                                           <input type="radio"defaultChecked={dataUpdate.Rating ==='2'}  value={'2'} name="Rating" id="2" />
                                 </div>
                                     <div className="flex gap-2 items-center">
                                            <label htmlFor="3" className="font-roboto">3</label>
-                                           <input type="radio"value={'3'} name="rating" id="3" />
+                                           <input type="radio" defaultChecked={dataUpdate.Rating ==='3'}  value={'3'} name="Rating" id="3" />
                                 </div>
                                     <div className="flex gap-2 items-center">
                                            <label htmlFor="4" className="font-roboto">4</label>
-                                           <input type="radio" value={'4'} name="rating" id="4" />
+                                           <input type="radio" defaultChecked={dataUpdate.Rating ==='4'} value={'4'} name="Rating" id="4" />
                                 </div>
                                     <div className="flex gap-2 items-center">
                                            <label htmlFor="5" className="font-roboto">5</label>
-                                           <input type="radio" value={'5'} name="rating" id="5" />
+                                           <input type="radio" value={'5'} defaultChecked={dataUpdate.Rating ==='5'} name="Rating" id="5" />
                                 </div>
     
                                 </div>

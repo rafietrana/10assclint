@@ -76,6 +76,7 @@ const AddCraft = () => {
               className="w-full px-3 py-2 outline-none border-2"
               name="Item_Name"
               type="text"
+              required
             />
           </div>
           <div>
@@ -84,6 +85,7 @@ const AddCraft = () => {
               className="w-full px-3 py-2 outline-none border-2"
               name="image"
               type="text"
+              required
             />
           </div>
           <div>
@@ -94,25 +96,27 @@ const AddCraft = () => {
               Select an SubCatagroy
             </label>
             <select
+               required
             name="subCatagory"
               id="countries"
-              className="  border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              className="  border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 "
             >
-              <option selected>Choose a  SubCatagrory Name</option>
-              <option    value="Landscape_Painting">Landscape Painting</option>
-              <option   value="Watercolour_Painting">Watercolour Painting:</option>
-              <option   value="Oil_Painting">Oil Painting</option>
-              <option   value="Charcoal_Sketching">Charcoal Sketching:</option>
-              <option   value="Cartoon_Drawing">Cartoon Drawing</option>
-              <option   value="Portrait_Drawing">Portrait Drawing</option>
+ 
+              <option    value="Landscape_Painting"  >Landscape Painting</option>
+              <option   value="Watercolour_Painting"  >Watercolour Painting:</option>
+              <option   value="Oil_Painting"   >Oil Painting</option>
+              <option   value="Charcoal_Sketching"   >Charcoal Sketching:</option>
+              <option   value="Cartoon_Drawing"     >Cartoon Drawing</option>
+              <option   value="Portrait_Drawing"    >Portrait Drawing</option>
             </select>
           </div>
           <div>
-            <label className="font-roboto ">Short Description</label>
+            <label className="font-roboto "               required>Short Description</label>
             <input
               className="w-full px-3 py-2 outline-none border-2"
               name="Short_Description"
               type="text"
+              required
             />
           </div>
           <div>
@@ -121,6 +125,7 @@ const AddCraft = () => {
               className="w-full px-3 py-2 outline-none border-2"
               name="price"
               type="text"
+              required
             />
           </div>
           <div>
@@ -129,6 +134,7 @@ const AddCraft = () => {
               className="w-full px-3 py-2 outline-none border-2"
               name="Procassing_Time"
               type="text"
+              required
             />
           </div>
 
@@ -160,13 +166,13 @@ const AddCraft = () => {
               <label htmlFor="yes" className="font-roboto">
                 yes
               </label>
-              <input type="radio" value={"yes"} name="Customization" id="yes" />
+              <input type="radio" value={"yes"} name="Customization" id="yes" required />
             </div>
             <div className="flex gap-2 items-center">
               <label htmlFor="no" className="font-roboto">
                 No
               </label>
-              <input type="radio" name="Customization" id="no" value={"no"} />
+              <input type="radio" name="Customization" id="no" value={"no"}               required/>
             </div>
           </div>
 
@@ -181,6 +187,7 @@ const AddCraft = () => {
                 value={"In stock"}
                 name="Stuck_Status"
                 id="in-stock"
+                required
               />
             </div>
             <div className="flex gap-2 items-center">
@@ -192,6 +199,7 @@ const AddCraft = () => {
                 name="Stuck_Status"
                 id="no-stock"
                 value={"Made to Order"}
+                required
               />
             </div>
           </div>
@@ -202,31 +210,31 @@ const AddCraft = () => {
               <label htmlFor="1" className="font-roboto">
                 1
               </label>
-              <input type="radio" value={"1"} name="rating" id="1" />
+              <input type="radio" value={"1"} name="rating" id="1"               required />
             </div>
             <div className="flex gap-2 items-center">
               <label htmlFor="3" className="font-roboto">
                 2
               </label>
-              <input type="radio" value={"2"} name="rating" id="2" />
+              <input type="radio" value={"2"} name="rating" id="2"                required/>
             </div>
             <div className="flex gap-2 items-center">
               <label htmlFor="3" className="font-roboto">
                 3
               </label>
-              <input type="radio" value={"3"} name="rating" id="3" />
+              <input type="radio" value={"3"} name="rating" id="3"                required/>
             </div>
             <div className="flex gap-2 items-center">
               <label htmlFor="4" className="font-roboto">
                 4
               </label>
-              <input type="radio" value={"4"} name="rating" id="4" />
+              <input type="radio" value={"4"} name="rating" id="4"                required/>
             </div>
             <div className="flex gap-2 items-center">
               <label htmlFor="5" className="font-roboto">
                 5
               </label>
-              <input type="radio" value={"5"} name="rating" id="5" />
+              <input type="radio" value={"5"} name="rating" id="5"                required/>
             </div>
           </div>
 

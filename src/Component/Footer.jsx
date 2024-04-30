@@ -14,7 +14,8 @@ const Footer = () => {
     <p className='font-semibold'>We can find you the perfect property <br />and help you locate the home of your dreams.
 </p>
 <div className='grid grid-cols-4 gap-2  my-2'>
-  <div className='text-xl text-green-500'><FaFacebook /></div>
+  <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">  <div className='text-xl text-green-500'> <FaFacebook /></div></a>
+
   <div className='text-xl  text-green-500'><FaTwitter /></div>
   <div className='text-xl  text-green-500'><LuInstagram /></div>
   <div className='text-xl  text-green-500'><FaPinterest /></div>
