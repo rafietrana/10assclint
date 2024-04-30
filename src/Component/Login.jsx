@@ -34,6 +34,9 @@ const Login = () => {
            .then(result => {
             console.log(result.user);
             toast.success('sucessfully login user');
+            setTimeout(()=>{
+                window.location.reload();
+              },1000)
             return <Navigate to={location.state ? location?.state : '/'}></Navigate>
            })
            .catch(error =>{
@@ -48,6 +51,9 @@ const Login = () => {
         .then(result =>{
             console.log(result.user);
             toast.success('Sucessfully Login With google');
+            setTimeout(()=>{
+              window.location.reload();
+            },2000)
             navigate(location?.state ? location?.state : '/')
         })
         .catch(error =>{
@@ -61,6 +67,9 @@ const Login = () => {
         .then(result =>{
             console.log(result.user);
             toast.success('Sucessfully Login With github')
+            setTimeout(()=>{
+                window.location.reload();
+              },2000)
         })
         .catch(error =>{
             console.error(error)
