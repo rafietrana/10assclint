@@ -15,9 +15,9 @@ const Footer = () => {
 </p>
 <div className='grid grid-cols-4 gap-2  my-2'>
   <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">  <div className='text-xl text-red-800'> <FaFacebook /></div></a>
-  <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">  <div className='text-xl text-red-800'> <FaTwitter /></div></a>
-  <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">  <div className='text-xl text-red-800'> <FaInstagram /></div></a>
-  <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">  <div className='text-xl text-red-800'> <FaLinkedin /></div></a>
+  <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">  <div className='text-xl text-red-800'> <FaTwitter /></div></a>
+  <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">  <div className='text-xl text-red-800'> <FaInstagram /></div></a>
+  <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">  <div className='text-xl text-red-800'> <FaLinkedin /></div></a>
 
  
 </div> 
