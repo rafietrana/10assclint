@@ -39,6 +39,7 @@ const Register = () => {
  
         console.log(result.user);
         toast.success('created user sucessfully');
+        
          setTimeout(()=>{
               window.location.reload();
          }, 2000)
