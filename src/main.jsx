@@ -24,9 +24,10 @@ import ShowAllCard from './Component/ShowAllCard';
 import AllViewDetails from './Component/AllViewDetails';
 import CraftList from './Component/CraftList';
 import Update from './Component/Update';
-import WeLoading from './Component/WeLoading';
+ 
 import SubCategory from './Component/SubCategory';
 import SubView from './Component/SubView';
+import WeLoading from './Component/WeLoading';
  
  
 
@@ -38,7 +39,7 @@ const router = createBrowserRouter([
     children:[
       {
         path: '/',
-        element: <WeLoading><Home></Home></WeLoading>
+        element:  <WeLoading><Home></Home></WeLoading>,
       },
       {
         path: '/login',
@@ -104,7 +105,7 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <AuthProvider>
-    <RouterProvider router={router} />
+    <RouterProvider fallbackElement={<div className='w-9/12 mx-auto flex justify-center items-center h-screen '><span className="loading loading-bars loading-lg"></span></div>} router={router} />
     </AuthProvider>
     <ToastContainer />
   </React.StrictMode>,

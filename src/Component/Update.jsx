@@ -43,6 +43,7 @@ const Update = () => {
                     window.location.reload();
 
                  },2000)
+ 
             }
             else{
                 toast.error('not sucessfully update your data')
