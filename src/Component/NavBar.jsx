@@ -32,7 +32,7 @@ const NavBar = () => {
 
   return (
     <div  className="">
-      <div className="navbar w-9/12 mx-auto">
+      <div className="navbar w-full md:w-9/12 mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -53,10 +53,52 @@ const NavBar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu menu-sm bg-red-500  dropdown-content mt-3  p-2 shadow z-50 rounded-box w-52"
             >
-              <li>
-                <a>Item 1</a>
+              <li className="font-robotocon text-black list-none text-xl">
+                <NavLink
+                  to={"/"}
+                  className={({ isActive }) =>
+                    isActive ? " border-b-2 font-bold" : ""
+                  }
+                >
+                  <p className={` ${theme === 'light' ? 'text-black' : 'text-[#e1a1a1]'}`}>Home</p>
+                
+                </NavLink>
+              </li>
+              <li className="font-robotocon text-black  list-none  text-xl  ">
+                <NavLink
+                  to={"/allcraft"}
+                  className={({ isActive }) =>
+                    isActive ? " border-b-2 font-bold" : ""
+                  }
+                >
+     
+                  <p className={` ${theme === 'light' ? 'text-black' : 'text-[#e1a1a1]'}`}>             All Art & craft Items</p>
+                </NavLink>
+              </li>
+              <li className="font-robotocon text-black  list-none  text-xl  ">
+                <NavLink
+                  to={"/addcraft"}
+                  className={({ isActive }) =>
+                    isActive ? " border-b-2 font-bold" : " "
+                  }
+                >
+                  
+                  <p className={` ${theme === 'light' ? 'text-black' : 'text-[#e1a1a1]'}`}> Add Craft Item</p>
+                </NavLink>
+              </li>
+              <li className="font-robotocon text-black  list-none  text-xl content-hover">
+                <NavLink
+                  to={`/craftlist/${user?.email}`}
+                  className={({ isActive }) =>
+                    isActive ? " border-b-2 font-bold" : " "
+                  }
+                >
+           
+                  <p className={` ${theme === 'light' ? 'text-black' : 'text-[#e1a1a1]'}`}>        My Art&Craft List</p>
+                
+                </NavLink>
               </li>
             </ul>
           </div>
