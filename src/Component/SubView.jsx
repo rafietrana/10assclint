@@ -4,7 +4,7 @@ import { useLoaderData } from "react-router-dom";
 
 const SubView = () => {
     const subview = useLoaderData();
-    console.log('subdata is',  subview);
+    console.log('subdata isssss',  subview);
     return (
         <div className="w-9/12 mx-auto py-10 ">
             {

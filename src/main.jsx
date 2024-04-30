@@ -91,11 +91,11 @@ const router = createBrowserRouter([
           ),
       },
       {
-        path: "/suview/:subcategory",
+        path: "/suview/:id",
         element: <SubView></SubView>,
         loader: ({ params }) =>
           fetch(
-            `https://my-assignment-10-server-two.vercel.app/findsub/${params.subcategory}`
+            `https://my-assignment-10-server-two.vercel.app/finddata/${params.id}`
           ),
       },
 

@@ -14,7 +14,7 @@ const SubCategory = () => {
 
 
 
-              <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 ">
+              <div className="grid lg:grid-cols-3 gap-5 md:grid-cols-2 grid-cols-1 ">
                    {
                     subData.map(dataSub => <SubCard key={dataSub._id} dataSub={dataSub}></SubCard>)
                    }

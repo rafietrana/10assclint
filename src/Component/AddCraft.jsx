@@ -103,10 +103,10 @@ const AddCraft = () => {
             >
               <option value="Landscape_Painting">Landscape Painting</option>
               <option value="Watercolour_Painting">
-                Watercolour Painting:
+                Watercolour Painting
               </option>
               <option value="Oil_Painting">Oil Painting</option>
-              <option value="Charcoal_Sketching">Charcoal Sketching:</option>
+              <option value="Charcoal_Sketching">Charcoal Sketching</option>
               <option value="Cartoon_Drawing">Cartoon Drawing</option>
               <option value="Portrait_Drawing">Portrait Drawing</option>
             </select>
