@@ -34,11 +34,9 @@ const AddCraft = () => {
       User_Email,
     };
 
+    console.log("Your Data Info Is ", dataInfo);
 
-
-    console.log('Your Data Info Is ', dataInfo);
-
-    fetch("http://localhost:5000/postdata", {
+    fetch("https://my-assignment-10-server-two.vercel.app/postdata", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -53,7 +51,9 @@ const AddCraft = () => {
           setTimeout(() => {
             window.location.reload();
           }, 2000);
-          fetch(`http://localhost:5000/mycard/${users?.email}`)
+          fetch(
+            `https://my-assignment-10-server-two.vercel.app/mycard/${users?.email}`
+          )
             .then((res) => res.json())
             .then((data) => {
               console.log(data);
@@ -65,7 +65,7 @@ const AddCraft = () => {
     <div className="w-9/12 my-28 mx-auto flex justify-center item-center flex-col h-screen">
       <div className="text-center font-roboto text-[#B70050]">
         <Fade cascade delay={500}>
-        <p className="font-semibold py-5 text-2xl">Add Craft Item</p>
+          <p className="font-semibold py-5 text-2xl">Add Craft Item</p>
         </Fade>
       </div>
       <div>
@@ -96,22 +96,25 @@ const AddCraft = () => {
               Select an SubCatagroy
             </label>
             <select
-               required
-            name="subCatagory"
+              required
+              name="subCatagory"
               id="countries"
               className="  border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 "
             >
- 
-              <option    value="Landscape_Painting"  >Landscape Painting</option>
-              <option   value="Watercolour_Painting"  >Watercolour Painting:</option>
-              <option   value="Oil_Painting"   >Oil Painting</option>
-              <option   value="Charcoal_Sketching"   >Charcoal Sketching:</option>
-              <option   value="Cartoon_Drawing"     >Cartoon Drawing</option>
-              <option   value="Portrait_Drawing"    >Portrait Drawing</option>
+              <option value="Landscape_Painting">Landscape Painting</option>
+              <option value="Watercolour_Painting">
+                Watercolour Painting:
+              </option>
+              <option value="Oil_Painting">Oil Painting</option>
+              <option value="Charcoal_Sketching">Charcoal Sketching:</option>
+              <option value="Cartoon_Drawing">Cartoon Drawing</option>
+              <option value="Portrait_Drawing">Portrait Drawing</option>
             </select>
           </div>
           <div>
-            <label className="font-roboto "               required>Short Description</label>
+            <label className="font-roboto " required>
+              Short Description
+            </label>
             <input
               className="w-full px-3 py-2 outline-none border-2"
               name="Short_Description"
@@ -166,13 +169,25 @@ const AddCraft = () => {
               <label htmlFor="yes" className="font-roboto">
                 yes
               </label>
-              <input type="radio" value={"yes"} name="Customization" id="yes" required />
+              <input
+                type="radio"
+                value={"yes"}
+                name="Customization"
+                id="yes"
+                required
+              />
             </div>
             <div className="flex gap-2 items-center">
               <label htmlFor="no" className="font-roboto">
                 No
               </label>
-              <input type="radio" name="Customization" id="no" value={"no"}               required/>
+              <input
+                type="radio"
+                name="Customization"
+                id="no"
+                value={"no"}
+                required
+              />
             </div>
           </div>
 
@@ -210,31 +225,31 @@ const AddCraft = () => {
               <label htmlFor="1" className="font-roboto">
                 1
               </label>
-              <input type="radio" value={"1"} name="rating" id="1"               required />
+              <input type="radio" value={"1"} name="rating" id="1" required />
             </div>
             <div className="flex gap-2 items-center">
               <label htmlFor="3" className="font-roboto">
                 2
               </label>
-              <input type="radio" value={"2"} name="rating" id="2"                required/>
+              <input type="radio" value={"2"} name="rating" id="2" required />
             </div>
             <div className="flex gap-2 items-center">
               <label htmlFor="3" className="font-roboto">
                 3
               </label>
-              <input type="radio" value={"3"} name="rating" id="3"                required/>
+              <input type="radio" value={"3"} name="rating" id="3" required />
             </div>
             <div className="flex gap-2 items-center">
               <label htmlFor="4" className="font-roboto">
                 4
               </label>
-              <input type="radio" value={"4"} name="rating" id="4"                required/>
+              <input type="radio" value={"4"} name="rating" id="4" required />
             </div>
             <div className="flex gap-2 items-center">
               <label htmlFor="5" className="font-roboto">
                 5
               </label>
-              <input type="radio" value={"5"} name="rating" id="5"                required/>
+              <input type="radio" value={"5"} name="rating" id="5" required />
             </div>
           </div>
 
